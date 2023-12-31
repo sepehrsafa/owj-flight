@@ -1,0 +1,28 @@
+{
+    "airline": "I3",
+    "default_luggage":{
+        "weight": "20",
+        "unit": "KG",
+        "quantity": "1"
+    },
+    "fare_info_cache_time": 360000,
+    "business_classes":["D","I","Z"],
+    "base_urls":{
+        "AvailabilityJS.jsp": "http://api.ataair.ir/ws1",
+        "AvailabilityFareJS.jsp": "http://api.ataair.ir/ws1",
+        "FareJS.jsp": "http://api.ataair.ir/ws1",
+        "NRSRT.jsp": "http://api.ataair.ir/ws1",
+        "NRSETR.jsp": "http://api.ataair.ir/ws1",
+        "NRSCommand.JSP": "http://api.ataair.ir/ws1",
+        "NRSPenalty.jsp": "http://api.ataair.ir/ws1",
+        "NRSPenaltyNow.jsp": "http://api.ataair.ir/ws1",
+        "NRSCWS.jsp": "http://api.ataair.ir/ws1",
+        "ReservJS": "https://api.ataair.ir/ws2/cgi-bin/NRSWEB.cgi",
+        "ETIssueJS": "https://api.ataair.ir/ws2/cgi-bin/NRSWEB.cgi",
+        "CancelPNRJS": "https://api.ataair.ir/ws2/cgi-bin/NRSWEB.cgi",
+        "CancelSeat": "https://api.ataair.ir/ws2/cgi-bin/NRSWEB.cgi",
+        "ETRefundJS": "https://api.ataair.ir/ws2/cgi-bin/NRSWEB.cgi"
+    },
+    "restricted_classes": [],
+    "for_which_nationalities_is_sale_restricted": []
+}

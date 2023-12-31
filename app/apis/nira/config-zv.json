@@ -1,0 +1,28 @@
+{
+    "airline": "ZV",
+    "default_luggage":{
+        "weight": "20",
+        "unit": "KG",
+        "quantity": "1"
+    },
+    "fare_info_cache_time": 360000,
+    "business_classes":["D","I","Z"],
+    "base_urls":{
+        "AvailabilityJS.jsp": "http://zv.nirasoft.ir:882",
+        "AvailabilityFareJS.jsp": "http://zv.nirasoft.ir:882",
+        "FareJS.jsp": "http://zv.nirasoft.ir:882",
+        "NRSRT.jsp": "http://zv.nirasoft.ir:882",
+        "NRSETR.jsp": "http://zv.nirasoft.ir:882",
+        "NRSCommand.JSP": "http://zv.nirasoft.ir:882",
+        "NRSPenalty.jsp": "http://zv.nirasoft.ir:882",
+        "NRSPenaltyNow.jsp": "http://zv.nirasoft.ir:882",
+        "NRSCWS.jsp": "http://zv.nirasoft.ir:882",
+        "ReservJS": "http://book.zagrosairlines.com/cgi-bin/NRSWeb.cgi",
+        "ETIssueJS": "http://book.zagrosairlines.com/cgi-bin/NRSWeb.cgi",
+        "CancelPNRJS": "http://book.zagrosairlines.com/cgi-bin/NRSWeb.cgi",
+        "CancelSeat": "http://book.zagrosairlines.com/cgi-bin/NRSWeb.cgi",
+        "ETRefundJS": "http://book.zagrosairlines.com/cgi-bin/NRSWeb.cgi"
+    },
+    "restricted_classes": ["Y", "YM", "YN", "YO", "YQ", "YL", "YB", "YE", "YH", "YK", "YR", "YU", "YS", "YX", "YT", "YW", "YG"],
+    "for_which_nationalities_is_sale_restricted": ["IR"]
+}
