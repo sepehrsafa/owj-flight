@@ -19,6 +19,7 @@ from fastapi.exceptions import RequestValidationError
 from starlette.exceptions import HTTPException as StarletteHTTPException
 from tortoise.contrib.fastapi import register_tortoise
 from tortoise.exceptions import DoesNotExist
+from fastapi.middleware.cors import CORSMiddleware
 
 from owjcommon.exceptions import (
     OWJException,
@@ -73,10 +74,28 @@ logging.config.dictConfig(LOGGING_CONFIG)
 
 logger = TraceLogger(__name__)
 
+
+def custom_generate_unique_id(route):
+    return f"{route.tags[0]}-{route.name}"
+
+
 app = FastAPI(
-    title="OWJ CRS Flight API",
+    title="OWJ CRS Flight Microservice",
     description="This is the API documentation for the OWJ CRS Flight Service.",
     version="1.0.0",
+    generate_unique_id_function=custom_generate_unique_id,
+    servers=[
+        {"url": "https://flight.owj.app", "description": "Production environment"},
+        {"url": "http://localhost:8000", "description": "Local environment"},
+    ],
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 app.add_middleware(TraceIDMiddleware)
 
